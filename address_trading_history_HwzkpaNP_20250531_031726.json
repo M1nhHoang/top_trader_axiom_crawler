@@ -1,0 +1,111 @@
+{
+  "address_id": "HwzkpaNPx6aFkeQ5We3JMn77q76dv9tTLEhkS5tQrNgE",
+  "days_scraped": 1,
+  "transactions": [
+    {
+      "signature": "o3tofPyzwnDwxDrprcVKVDCEsYiaByjxB6woyaQkA7QcqYkyjrXX9NR34WuutW8RdMWLQPVx8VENjuFDQsgJZBf",
+      "block": "343532728",
+      "time": "5 mins ago",
+      "timestamp": "2025-05-30T20:12:06.041482+00:00",
+      "instructions": [
+        "buy"
+      ],
+      "by": "HwzkpaNPx6...hkS5tQrNgE",
+      "value": "3.004",
+      "fee": "0.001005",
+      "page": 1
+    },
+    {
+      "signature": "2eaLLEM7KuNyBjjtSdNRwQkHRDHsG1R3q5YSHwCNqEAXXQ4M8fAoFHsN7UjPoHxZBZArHbc9jSGEgjW7HrrdtfaZ",
+      "block": "343526605",
+      "time": "45 mins ago",
+      "timestamp": "2025-05-30T19:32:06.334083+00:00",
+      "instructions": [
+        "buy"
+      ],
+      "by": "HwzkpaNPx6...hkS5tQrNgE",
+      "value": "0.502",
+      "fee": "0.00101",
+      "page": 1
+    },
+    {
+      "signature": "4jEVXQ4a3eLz6SkDE19xtc2urVJu2SMWJDniexKfJ4hX8EhpJLwJ86K3Mz779CUiV7uq5rNa2NTcUBJHYrx3cJ4x",
+      "block": "343526167",
+      "time": "48 mins ago",
+      "timestamp": "2025-05-30T19:29:06.536793+00:00",
+      "instructions": [
+        "buy"
+      ],
+      "by": "HwzkpaNPx6...hkS5tQrNgE",
+      "value": "0.204",
+      "fee": "0.001005",
+      "page": 1
+    },
+    {
+      "signature": "jzXLty69ZjX6crfzJxi6LUGznLyEMcaStpSbK9tf3j7YCKp6uQAwyTnNxvtATQVr8y9o6scT8fxHmakVB2Pr5L8",
+      "block": "343523776",
+      "time": "1 hr ago",
+      "timestamp": "2025-05-30T20:17:06.630938+00:00",
+      "instructions": [
+        "buy"
+      ],
+      "by": "HwzkpaNPx6...hkS5tQrNgE",
+      "value": "0.304",
+      "fee": "0.001005",
+      "page": 1
+    }
+  ],
+  "balance_changes": {
+    "o3tofPyzwnDwxDrprcVKVDCEsYiaByjxB6woyaQkA7QcqYkyjrXX9NR34WuutW8RdMWLQPVx8VENjuFDQsgJZBf": [
+      {
+        "signature": "o3tofPyzwnDwxDrprcVKVDCEsYiaByjxB6woyaQkA7QcqYkyjrXX9NR34WuutW8RdMWLQPVx8VENjuFDQsgJZBf",
+        "block": "343532728",
+        "time": "5 mins ago",
+        "amount": "buy\n7+",
+        "post_balance": "HwzkpaNPx6...hkS5tQrNgE",
+        "token_name": "3.004",
+        "token_address": ""
+      }
+    ],
+    "2eaLLEM7KuNyBjjtSdNRwQkHRDHsG1R3q5YSHwCNqEAXXQ4M8fAoFHsN7UjPoHxZBZArHbc9jSGEgjW7HrrdtfaZ": [
+      {
+        "signature": "2eaLLEM7KuNyBjjtSdNRwQkHRDHsG1R3q5YSHwCNqEAXXQ4M8fAoFHsN7UjPoHxZBZArHbc9jSGEgjW7HrrdtfaZ",
+        "block": "343526605",
+        "time": "45 mins ago",
+        "amount": "buy\n7+",
+        "post_balance": "HwzkpaNPx6...hkS5tQrNgE",
+        "token_name": "0.502",
+        "token_address": ""
+      }
+    ],
+    "4jEVXQ4a3eLz6SkDE19xtc2urVJu2SMWJDniexKfJ4hX8EhpJLwJ86K3Mz779CUiV7uq5rNa2NTcUBJHYrx3cJ4x": [
+      {
+        "signature": "4jEVXQ4a3eLz6SkDE19xtc2urVJu2SMWJDniexKfJ4hX8EhpJLwJ86K3Mz779CUiV7uq5rNa2NTcUBJHYrx3cJ4x",
+        "block": "343526167",
+        "time": "48 mins ago",
+        "amount": "buy\n7+",
+        "post_balance": "HwzkpaNPx6...hkS5tQrNgE",
+        "token_name": "0.204",
+        "token_address": ""
+      }
+    ],
+    "jzXLty69ZjX6crfzJxi6LUGznLyEMcaStpSbK9tf3j7YCKp6uQAwyTnNxvtATQVr8y9o6scT8fxHmakVB2Pr5L8": [
+      {
+        "signature": "jzXLty69ZjX6crfzJxi6LUGznLyEMcaStpSbK9tf3j7YCKp6uQAwyTnNxvtATQVr8y9o6scT8fxHmakVB2Pr5L8",
+        "block": "343523776",
+        "time": "1 hr ago",
+        "amount": "buy\n7+",
+        "post_balance": "HwzkpaNPx6...hkS5tQrNgE",
+        "token_name": "0.304",
+        "token_address": ""
+      }
+    ]
+  },
+  "summary": {
+    "total_transactions": 4,
+    "transaction_pages": 2,
+    "balance_changes_found": 4,
+    "balance_change_pages": 1
+  },
+  "timestamp": "2025-05-31 03:17:26"
+}
