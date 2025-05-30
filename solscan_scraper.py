@@ -8,6 +8,8 @@ import re
 from datetime import datetime, timedelta, timezone
 from typing import List, Set, Dict, Any
 
+AXIOM_PROGRAM_ID = ["AxiomfHaWDemCFBLBayqnEnNwE6b7B2Qz3UmzMpgbMG6", "AxiomxSitiyXyPjKgJ9XSrdhsydtZsskZTEDam3PxKcC"]
+
 def extract_table_data_task(driver, program_id: str, max_addresses: int = 10):
     """
     Task function to extract transaction data from Solscan account page
@@ -64,10 +66,10 @@ def extract_table_data_task(driver, program_id: str, max_addresses: int = 10):
                     
                     for link in program_links:
                         href = link.get_attribute("href")
-                        if "AxiomfHaWDemCFBLBayqnEnNwE6b7B2Qz3UmzMpgbMG6" in href:
+                        if any(program_id in href for program_id in AXIOM_PROGRAM_ID):
                             axiom_found = True
                             break
-                    
+
                     if axiom_found and by_address not in unique_addresses:
                         unique_addresses.add(by_address)
                         print(f"  Found address {len(unique_addresses)}: {by_address}")
@@ -204,7 +206,7 @@ def extract_address_transactions_task(driver, address_id: str, days: int = 1):
     
     transactions = []
     page_count = 0
-    max_pages = 100  # Safety limit
+    max_pages = 1  # Safety limit
     
     print(f"Starting to scrape transactions for address: {address_id}")
     print(f"Looking for transactions from last {days} day(s)")
@@ -247,13 +249,7 @@ def extract_address_transactions_task(driver, address_id: str, days: int = 1):
                     block_number = block_link.text.strip()
                     
                     # Extract time (column 3 - index 3)
-                    time_cell = cells[3]
-                    # Look for the specific div with time text
-                    try:
-                        time_div = time_cell.find_element(By.CSS_SELECTOR, "div.not-italic.font-normal.text-neutral7")
-                        time_text = time_div.text.strip()
-                    except:
-                        time_text = time_cell.text.strip()
+                    time_text = cells[3].text.strip()
                     
                     # Parse time to check if within our date range
                     transaction_time = parse_time_text(time_text)
@@ -265,40 +261,17 @@ def extract_address_transactions_task(driver, address_id: str, days: int = 1):
                         break
                     
                     # Extract instructions (column 4 - index 4)
-                    instructions_cell = cells[4]
-                    instructions = []
-                    # Look for instruction divs with specific classes
-                    try:
-                        instruction_divs = instructions_cell.find_elements(By.CSS_SELECTOR, "div.truncate")
-                        for div in instruction_divs:
-                            inst_text = div.text.strip()
-                            if inst_text and inst_text not in ['', '+']:
-                                instructions.append(inst_text)
-                    except:
-                        # Fallback to getting all text
-                        instructions_text = instructions_cell.text.strip()
-                        if instructions_text:
-                            instructions.append(instructions_text)
+                    instructions_text = cells[4].text.strip()
+                    instructions = [inst.strip() for inst in instructions_text.split('\n') if inst.strip() and inst.strip() != '+']
                     
-                    # Extract "By" column (column 5 - index 5) - truncated address
-                    by_cell = cells[5]
-                    by_text = extract_full_address_from_by_field(by_cell)
+                    # Extract "By" column (column 5 - index 5)
+                    by_text = extract_full_address_from_by_field(cells[5])
                     
-                    # Extract Value (SOL) (column 6 - index 6)
-                    value_cell = cells[6]
-                    try:
-                        value_div = value_cell.find_element(By.CSS_SELECTOR, "div.not-italic.font-normal.text-neutral7")
-                        value_text = value_div.text.strip()
-                    except:
-                        value_text = "0"
+                    # Extract Value (column 6 - index 6)
+                    value_text = cells[6].text.strip()
                     
-                    # Extract Fee (SOL) (column 7 - index 7)
-                    fee_cell = cells[7]
-                    try:
-                        fee_div = fee_cell.find_element(By.CSS_SELECTOR, "div.not-italic.font-normal.text-neutral7")
-                        fee_text = fee_div.text.strip()
-                    except:
-                        fee_text = "0"
+                    # Extract Fee (column 7 - index 7)
+                    fee_text = cells[7].text.strip()
                     
                     # Extract Programs (column 8 - index 8)
                     programs_cell = cells[8]
@@ -426,7 +399,7 @@ def extract_balance_changes_task(driver, address_id: str, signatures: List[str])
         dict: Balance changes data mapped by signature
     """
     # Navigate to base URL first
-    url = f"https://solscan.io/account/{address_id}"
+    url = f"https://solscan.io/account/{address_id}?page=1#balanceChanges"
     driver.get(url)
     
     # Wait for page to load
@@ -435,66 +408,6 @@ def extract_balance_changes_task(driver, address_id: str, signatures: List[str])
     
     # Additional wait for dynamic content
     time.sleep(3)
-    
-    # Now click on Balance Changes tab
-    try:
-        # Try multiple selectors for Balance Changes tab
-        balance_tab_selectors = [
-            "button[id*='balanceChanges']",
-            "button:contains('Balance Changes')",
-            "div[role='tab']:contains('Balance Changes')",
-            "a[href*='#balanceChanges']",
-            # XPath selectors
-            "//button[contains(text(), 'Balance Changes')]",
-            "//div[@role='tab' and contains(text(), 'Balance Changes')]",
-            # More generic pattern
-            "*[id*='balanceChanges']",
-            "*[data-state][contains(text(), 'Balance Changes')]"
-        ]
-        
-        balance_tab = None
-        for selector in balance_tab_selectors:
-            try:
-                if "contains" in selector and "//" not in selector:
-                    # Skip CSS contains for now
-                    continue
-                elif "//" in selector:
-                    # XPath selector
-                    balance_tab = driver.find_element(By.XPATH, selector)
-                else:
-                    balance_tab = driver.find_element(By.CSS_SELECTOR, selector)
-                
-                if balance_tab:
-                    print(f"Found Balance Changes tab using selector: {selector}")
-                    break
-            except:
-                continue
-        
-        # If not found, try JavaScript search
-        if not balance_tab:
-            balance_tab = driver.execute_script("""
-                // Search for Balance Changes text in various elements
-                var elements = document.querySelectorAll('button, div[role="tab"], a');
-                for (var el of elements) {
-                    if (el.textContent.includes('Balance Changes')) {
-                        return el;
-                    }
-                }
-                return null;
-            """)
-        
-        if balance_tab:
-            print("Clicking Balance Changes tab...")
-            driver.execute_script("arguments[0].click();", balance_tab)
-            time.sleep(3)  # Wait for tab content to load
-        else:
-            print("Warning: Could not find Balance Changes tab, proceeding anyway...")
-    except Exception as e:
-        print(f"Error clicking Balance Changes tab: {e}")
-        print("Attempting to navigate directly to balance changes URL...")
-        # Try direct navigation as fallback
-        driver.get(f"{url}#balanceChanges")
-        time.sleep(3)
     
     balance_changes = {}
     page_count = 0
@@ -528,65 +441,40 @@ def extract_balance_changes_task(driver, address_id: str, signatures: List[str])
             for i, row in enumerate(rows):
                 try:
                     cells = row.find_elements(By.CSS_SELECTOR, "td")
-                    if len(cells) < 7:
-                        continue
-                    
+
                     # Extract signature (column 1 - index 1)
                     signature_cell = cells[1]
                     signature_link = signature_cell.find_element(By.CSS_SELECTOR, "a")
                     signature = signature_link.get_attribute("href").split("/tx/")[-1]
                     
-                    if signature in signature_set and signature not in found_signatures:
+                    if signature in signature_set:
                         # Extract block (column 2 - index 2)
-                        block_cell = cells[2]
-                        try:
-                            block_link = block_cell.find_element(By.CSS_SELECTOR, "a")
-                            block_number = block_link.text.strip()
-                        except:
-                            block_number = block_cell.text.strip()
+                        block_number = cells[2].text.strip()
                         
                         # Extract time (column 3 - index 3)
-                        time_cell = cells[3]
-                        try:
-                            time_div = time_cell.find_element(By.CSS_SELECTOR, "div.not-italic.font-normal.text-neutral7")
-                            time_text = time_div.text.strip()
-                        except:
-                            time_text = time_cell.text.strip()
+                        time_text = cells[3].text.strip()
                         
-                        # Extract amount (column 4 - index 4) 
-                        amount_cell = cells[4]
-                        try:
-                            # Look for amount in success (green) or error (red) colored div
-                            amount_div = amount_cell.find_element(By.CSS_SELECTOR, "div.not-italic.font-normal")
-                            amount_text = amount_div.text.strip()
-                        except:
-                            amount_text = amount_cell.text.strip()
+                        # Extract amount (column 4 - index 4)
+                        amount_text = cells[4].text.strip()
                         
                         # Extract post balance (column 5 - index 5)
-                        post_balance_cell = cells[5]
-                        try:
-                            post_balance_div = post_balance_cell.find_element(By.CSS_SELECTOR, "div.not-italic.font-normal.text-neutral7")
-                            post_balance_text = post_balance_div.text.strip()
-                        except:
-                            post_balance_text = post_balance_cell.text.strip()
+                        post_balance_text = cells[5].text.strip()
                         
                         # Extract token info (column 6 - index 6)
                         token_cell = cells[6]
-                        
-                        # Initialize default values
-                        token_name = "Unknown"
-                        token_address = ""
-                        
                         try:
-                            # Look for token link in the specific span structure
-                            token_link = token_cell.find_element(By.CSS_SELECTOR, "span a")
+                            # Extract token name from the text content of the link
+                            token_link = token_cell.find_element(By.CSS_SELECTOR, "a.text-current")
                             token_name = token_link.text.strip()
-                            token_href = token_link.get_attribute("href")
-                            if "/token/" in token_href:
-                                token_address = token_href.split("/token/")[-1]
+                            token_address = token_link.get_attribute("href").split("/token/")[-1]
                         except:
-                            # Fallback to get any text from token cell
-                            token_name = token_cell.text.strip() or "Unknown"
+                            token_name = ""
+                            token_address = ""
+                        
+                        if not token_name:
+                            print(f"  ERROR: Could not extract token name from row {i}")
+                            print(f"  Token cell HTML: {token_cell.get_attribute('innerHTML')}")
+                            continue  # Skip this row if no token found
                         
                         balance_change_data = {
                             'signature': signature,
@@ -602,12 +490,21 @@ def extract_balance_changes_task(driver, address_id: str, signatures: List[str])
                             balance_changes[signature] = []
                         balance_changes[signature].append(balance_change_data)
                         
+                        # Track that we found this signature (but don't prevent finding more balance changes for it)
                         found_signatures.add(signature)
                         found_on_page = True
                         print(f"  Found balance change for {signature[:16]}... ({token_name}: {amount_text})")
                         
                 except Exception as e:
                     print(f"  Error processing balance change row {i}: {str(e)}")
+                    # Debug: print row HTML structure if error occurs
+                    try:
+                        print(f"  Row {i} cell count: {len(cells)}")
+                        if len(cells) >= 7:
+                            print(f"  Amount cell HTML: {cells[4].get_attribute('innerHTML')[:200]}...")
+                            print(f"  Token cell HTML: {cells[6].get_attribute('innerHTML')[:200]}...")
+                    except:
+                        pass
                     continue
             
             if not found_on_page:
@@ -892,16 +789,15 @@ if __name__ == "__main__":
     print("SOLSCAN ADDRESS TRANSACTION SCRAPER - UPDATED VERSION")
     print("="*70)
     
-    # Address từ transactions mà bạn cung cấp - đây là address thật
-    example_address = "HwzkpaNPx6aFkeQ5We3JMn77q76dv9tTLEhkS5tQrNgE"  # Address từ HTML bạn cung cấp
+    address = "HwzkpaNPx6aFkeQ5We3JMn77q76dv9tTLEhkS5tQrNgE"
     
-    print(f"Testing with address: {example_address}")
+    print(f"Testing with address: {address}")
     print("Scraping Axiom transactions from last 1 day...")
     print()
     
     try:
         # Scrape transactions từ 1 ngày gần nhất
-        result = scrape_address_transactions(example_address, days=1)
+        result = scrape_address_transactions(address, days=1)
         
         if result:
             print("SCRAPING RESULTS")
@@ -924,8 +820,3 @@ if __name__ == "__main__":
         print(f"\nError during scraping: {e}")
         import traceback
         traceback.print_exc()
-    
-    print("\n" + "="*70)
-    print("To use this in your code:")
-    print("result = scrape_address_transactions('your_address_here', days=7)")
-    print("="*70) 

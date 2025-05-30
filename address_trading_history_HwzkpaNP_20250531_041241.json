@@ -1,0 +1,83 @@
+{
+  "address_id": "HwzkpaNPx6aFkeQ5We3JMn77q76dv9tTLEhkS5tQrNgE",
+  "days_scraped": 1,
+  "transactions": [
+    {
+      "signature": "5CAoBeSGVs3HQFAFoSae4SWcQ2cneUxzjUwCaRFtxJ18YQQ2pNWEwVTkegACs9rUTLsSprR8G1ZYwVRmo3vkcJg6",
+      "block": "343538460",
+      "time": "29 mins ago",
+      "timestamp": "2025-05-30T20:50:13.068029+00:00",
+      "instructions": [
+        "buy",
+        "7+"
+      ],
+      "by": "HwzkpaNPx6...hkS5tQrNgE",
+      "value": "0.504",
+      "fee": "0.00101",
+      "page": 1
+    },
+    {
+      "signature": "5jjsC1pMzxPJK3sm7mgADBc1fKFFTnEVPyBZpVjmnPfuhnA4SJFMR8MwuDXFK1evzz5cn6MVsT6PsyXKK6s3qLdU",
+      "block": "343533768",
+      "time": "1 hr ago",
+      "timestamp": "2025-05-30T20:19:13.333112+00:00",
+      "instructions": [
+        "buy",
+        "7+"
+      ],
+      "by": "HwzkpaNPx6...hkS5tQrNgE",
+      "value": "0.504",
+      "fee": "0.001005",
+      "page": 1
+    }
+  ],
+  "balance_changes": {
+    "5CAoBeSGVs3HQFAFoSae4SWcQ2cneUxzjUwCaRFtxJ18YQQ2pNWEwVTkegACs9rUTLsSprR8G1ZYwVRmo3vkcJg6": [
+      {
+        "signature": "5CAoBeSGVs3HQFAFoSae4SWcQ2cneUxzjUwCaRFtxJ18YQQ2pNWEwVTkegACs9rUTLsSprR8G1ZYwVRmo3vkcJg6",
+        "block": "343538460",
+        "time": "29 mins ago",
+        "amount": "+12,333,653.500855",
+        "post_balance": "12,333,653.5",
+        "token_name": "SWIMIFY",
+        "token_address": "GyXsoZse6Zp4LCD6ikQi2yZnRiime3bE72WpT99kpump"
+      },
+      {
+        "signature": "5CAoBeSGVs3HQFAFoSae4SWcQ2cneUxzjUwCaRFtxJ18YQQ2pNWEwVTkegACs9rUTLsSprR8G1ZYwVRmo3vkcJg6",
+        "block": "343538460",
+        "time": "29 mins ago",
+        "amount": "-0.50404928",
+        "post_balance": "6.6173",
+        "token_name": "SOL",
+        "token_address": "So11111111111111111111111111111111111111111"
+      }
+    ],
+    "5jjsC1pMzxPJK3sm7mgADBc1fKFFTnEVPyBZpVjmnPfuhnA4SJFMR8MwuDXFK1evzz5cn6MVsT6PsyXKK6s3qLdU": [
+      {
+        "signature": "5jjsC1pMzxPJK3sm7mgADBc1fKFFTnEVPyBZpVjmnPfuhnA4SJFMR8MwuDXFK1evzz5cn6MVsT6PsyXKK6s3qLdU",
+        "block": "343533768",
+        "time": "1 hr ago",
+        "amount": "+3,676,849.356694",
+        "post_balance": "3,676,849.35",
+        "token_name": "mimi",
+        "token_address": "EucywkYMnuayeXLAr6qXzZM2AbqFank7aMkG4Y8Hpump"
+      },
+      {
+        "signature": "5jjsC1pMzxPJK3sm7mgADBc1fKFFTnEVPyBZpVjmnPfuhnA4SJFMR8MwuDXFK1evzz5cn6MVsT6PsyXKK6s3qLdU",
+        "block": "343533768",
+        "time": "1 hr ago",
+        "amount": "-0.50404428",
+        "post_balance": "5.9081",
+        "token_name": "SOL",
+        "token_address": "So11111111111111111111111111111111111111111"
+      }
+    ]
+  },
+  "summary": {
+    "total_transactions": 2,
+    "transaction_pages": 1,
+    "balance_changes_found": 2,
+    "balance_change_pages": 2
+  },
+  "timestamp": "2025-05-31 04:19:32"
+}
