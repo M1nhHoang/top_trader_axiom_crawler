@@ -1,0 +1,440 @@
+{
+  "address_id": "6xspgTx3zS1iYvFy73fWhbRTVtLfCqbAVJHxUxhurHvC",
+  "days_scraped": 1,
+  "transactions": [
+    {
+      "signature": "39KLSu7qyfRxsQuzSpb4Ujt9nfd4CokZtRqCFBZAVcm1LGepmuCDrwHZEapNcUzdfkXH3a2i8BtQV17A5ZPo35sq",
+      "block": "343674060",
+      "time": "1 hr ago",
+      "timestamp": "2025-05-31T11:39:05+00:00",
+      "instructions": [
+        "buy"
+      ],
+      "by": "6xspgTx3zS1iYvFy73fWhbRTVtLfCqbAVJHxUxhurHvC",
+      "value": "0.007244",
+      "fee": "0.000105",
+      "page": 1,
+      "balance_changes": [
+        {
+          "signature": "39KLSu7qyfRxsQuzSpb4Ujt9nfd4CokZtRqCFBZAVcm1LGepmuCDrwHZEapNcUzdfkXH3a2i8BtQV17A5ZPo35sq",
+          "block": "343674060",
+          "time": "1 hr ago",
+          "amount": "+91,185.935938",
+          "post_balance": "91,185.935938",
+          "token_name": "boop",
+          "token_address": "BLETZGt2KDXPWKFhkpBfNGpw4XH4p26zzEz2BUQLpump"
+        },
+        {
+          "signature": "39KLSu7qyfRxsQuzSpb4Ujt9nfd4CokZtRqCFBZAVcm1LGepmuCDrwHZEapNcUzdfkXH3a2i8BtQV17A5ZPo35sq",
+          "block": "343674060",
+          "time": "1 hr ago",
+          "amount": "-0.007244281",
+          "post_balance": "0.001586250",
+          "token_name": "SOL",
+          "token_address": "So11111111111111111111111111111111111111111"
+        }
+      ]
+    },
+    {
+      "signature": "3u21YBbJfK66WTrZFnq7qKraDthUyC7JmWWvrKMzauEEGNuRHEkaroNHPJwGTh7Laop9S4FqivSvDSvLsCLHy6Nv",
+      "block": "343672766",
+      "time": "1 hr ago",
+      "timestamp": "2025-05-31T11:30:38+00:00",
+      "instructions": [
+        "buy"
+      ],
+      "by": "6xspgTx3zS1iYvFy73fWhbRTVtLfCqbAVJHxUxhurHvC",
+      "value": "0.005205",
+      "fee": "0.000105",
+      "page": 1,
+      "balance_changes": [
+        {
+          "signature": "3u21YBbJfK66WTrZFnq7qKraDthUyC7JmWWvrKMzauEEGNuRHEkaroNHPJwGTh7Laop9S4FqivSvDSvLsCLHy6Nv",
+          "block": "343672766",
+          "time": "1 hr ago",
+          "amount": "+69,901.138813",
+          "post_balance": "69,901.138813",
+          "token_name": "Watch Dogs",
+          "token_address": "CJZt9keikCUkcDFTrVRckQYRsKvaAVspxKCzh8e5pump"
+        },
+        {
+          "signature": "3u21YBbJfK66WTrZFnq7qKraDthUyC7JmWWvrKMzauEEGNuRHEkaroNHPJwGTh7Laop9S4FqivSvDSvLsCLHy6Nv",
+          "block": "343672766",
+          "time": "1 hr ago",
+          "amount": "-0.005205001",
+          "post_balance": "0.003940976",
+          "token_name": "SOL",
+          "token_address": "So11111111111111111111111111111111111111111"
+        }
+      ]
+    },
+    {
+      "signature": "3DZp7ozYGcsGQrGFhtkaPmYwrAoVTLZowC6La4hqpu6QxJuui9HXYCgVWUWEqRg85nTxDogBFjPkiDFNkChSemUY",
+      "block": "343672219",
+      "time": "1 hr ago",
+      "timestamp": "2025-05-31T11:27:04+00:00",
+      "instructions": [
+        "buy"
+      ],
+      "by": "6xspgTx3zS1iYvFy73fWhbRTVtLfCqbAVJHxUxhurHvC",
+      "value": "0.007244",
+      "fee": "0.000105",
+      "page": 1,
+      "balance_changes": [
+        {
+          "signature": "3DZp7ozYGcsGQrGFhtkaPmYwrAoVTLZowC6La4hqpu6QxJuui9HXYCgVWUWEqRg85nTxDogBFjPkiDFNkChSemUY",
+          "block": "343672219",
+          "time": "1 hr ago",
+          "amount": "+108,230.859894",
+          "post_balance": "108,230.859894",
+          "token_name": "Watch Dogs",
+          "token_address": "CJZt9keikCUkcDFTrVRckQYRsKvaAVspxKCzh8e5pump"
+        },
+        {
+          "signature": "3DZp7ozYGcsGQrGFhtkaPmYwrAoVTLZowC6La4hqpu6QxJuui9HXYCgVWUWEqRg85nTxDogBFjPkiDFNkChSemUY",
+          "block": "343672219",
+          "time": "1 hr ago",
+          "amount": "-0.007244281",
+          "post_balance": "0.004074796",
+          "token_name": "SOL",
+          "token_address": "So11111111111111111111111111111111111111111"
+        }
+      ]
+    },
+    {
+      "signature": "4tGq4ihYko91R18BbaEFs8eptojqUDEq9xZqCv4mivQyr9DwbCNxT3epjdQLbun9e3DqHT3srjdubGvAbonQLwBa",
+      "block": "343671914",
+      "time": "1 hr ago",
+      "timestamp": "2025-05-31T11:25:01+00:00",
+      "instructions": [
+        "buy"
+      ],
+      "by": "6xspgTx3zS1iYvFy73fWhbRTVtLfCqbAVJHxUxhurHvC",
+      "value": "0.012244",
+      "fee": "0.000105",
+      "page": 1,
+      "balance_changes": [
+        {
+          "signature": "4tGq4ihYko91R18BbaEFs8eptojqUDEq9xZqCv4mivQyr9DwbCNxT3epjdQLbun9e3DqHT3srjdubGvAbonQLwBa",
+          "block": "343671914",
+          "time": "1 hr ago",
+          "amount": "+229,834.459341",
+          "post_balance": "229,834.459341",
+          "token_name": "PIG",
+          "token_address": "H1CQptvJf2XbgKg3RGZhje5dQU1qvbpXah1vEdk7fSBn"
+        },
+        {
+          "signature": "4tGq4ihYko91R18BbaEFs8eptojqUDEq9xZqCv4mivQyr9DwbCNxT3epjdQLbun9e3DqHT3srjdubGvAbonQLwBa",
+          "block": "343671914",
+          "time": "1 hr ago",
+          "amount": "-0.012244280",
+          "post_balance": "0.003713245",
+          "token_name": "SOL",
+          "token_address": "So11111111111111111111111111111111111111111"
+        }
+      ]
+    },
+    {
+      "signature": "2yC4XBswS6n8FWo9cZvYXo8GzmEzYnoTikUDqDxWq5SwFAufAiGhyVHEjFbvJegipWD1ptvnJ8jxiyirj6vesq4N",
+      "block": "343671513",
+      "time": "1 hr ago",
+      "timestamp": "2025-05-31T11:22:23+00:00",
+      "instructions": [
+        "buy"
+      ],
+      "by": "6xspgTx3zS1iYvFy73fWhbRTVtLfCqbAVJHxUxhurHvC",
+      "value": "0.017244",
+      "fee": "0.000105",
+      "page": 1,
+      "balance_changes": [
+        {
+          "signature": "2yC4XBswS6n8FWo9cZvYXo8GzmEzYnoTikUDqDxWq5SwFAufAiGhyVHEjFbvJegipWD1ptvnJ8jxiyirj6vesq4N",
+          "block": "343671513",
+          "time": "1 hr ago",
+          "amount": "+407,844.149573",
+          "post_balance": "407,844.149573",
+          "token_name": "HAMMERSTER",
+          "token_address": "5bk1BN94pkuHkaKXjmWMSKFbZiNR9xAKSQB9hEYRpump"
+        },
+        {
+          "signature": "2yC4XBswS6n8FWo9cZvYXo8GzmEzYnoTikUDqDxWq5SwFAufAiGhyVHEjFbvJegipWD1ptvnJ8jxiyirj6vesq4N",
+          "block": "343671513",
+          "time": "1 hr ago",
+          "amount": "-0.017244281",
+          "post_balance": "0.003992680",
+          "token_name": "SOL",
+          "token_address": "So11111111111111111111111111111111111111111"
+        }
+      ]
+    },
+    {
+      "signature": "5QoEazbvZRLCx3XVcmrGgh3PSV879wWsYcxFt4FKJo5aDjag8eFNjnBBvfk5PgXAycprHbbtrCbrcMvqjmCppjTG",
+      "block": "343671166",
+      "time": "1 hr ago",
+      "timestamp": "2025-05-31T11:20:06+00:00",
+      "instructions": [
+        "buy"
+      ],
+      "by": "6xspgTx3zS1iYvFy73fWhbRTVtLfCqbAVJHxUxhurHvC",
+      "value": "0.022244",
+      "fee": "0.000105",
+      "page": 1,
+      "balance_changes": [
+        {
+          "signature": "5QoEazbvZRLCx3XVcmrGgh3PSV879wWsYcxFt4FKJo5aDjag8eFNjnBBvfk5PgXAycprHbbtrCbrcMvqjmCppjTG",
+          "block": "343671166",
+          "time": "1 hr ago",
+          "amount": "+596,290.390667",
+          "post_balance": "596,290.390667",
+          "token_name": "BATLEFIELD",
+          "token_address": "25f2xMnkYnBhyUjLGs6FMwoqaW7Cc8jQRAn6ah64pump"
+        },
+        {
+          "signature": "5QoEazbvZRLCx3XVcmrGgh3PSV879wWsYcxFt4FKJo5aDjag8eFNjnBBvfk5PgXAycprHbbtrCbrcMvqjmCppjTG",
+          "block": "343671166",
+          "time": "1 hr ago",
+          "amount": "-0.022244280",
+          "post_balance": "0.004796442",
+          "token_name": "SOL",
+          "token_address": "So11111111111111111111111111111111111111111"
+        }
+      ]
+    },
+    {
+      "signature": "5GJexhXgyNffHd1VhbXBzQf9trEDBU6oGXjKBkhAjUUHpHDbTLxFDHisTcQGpingbfBrgqDvQ8T4VL9yr2uYaPMG",
+      "block": "343670807",
+      "time": "1 hr ago",
+      "timestamp": "2025-05-31T11:17:45+00:00",
+      "instructions": [
+        "buy"
+      ],
+      "by": "6xspgTx3zS1iYvFy73fWhbRTVtLfCqbAVJHxUxhurHvC",
+      "value": "0.027244",
+      "fee": "0.000105",
+      "page": 1,
+      "balance_changes": [
+        {
+          "signature": "5GJexhXgyNffHd1VhbXBzQf9trEDBU6oGXjKBkhAjUUHpHDbTLxFDHisTcQGpingbfBrgqDvQ8T4VL9yr2uYaPMG",
+          "block": "343670807",
+          "time": "1 hr ago",
+          "amount": "+657,413.895908",
+          "post_balance": "657,413.895908",
+          "token_name": "OTTERWATCH",
+          "token_address": "R8QCxLYGriBuXgAhcRenJmtfKjXhAAgskC1wUBNpump"
+        },
+        {
+          "signature": "5GJexhXgyNffHd1VhbXBzQf9trEDBU6oGXjKBkhAjUUHpHDbTLxFDHisTcQGpingbfBrgqDvQ8T4VL9yr2uYaPMG",
+          "block": "343670807",
+          "time": "1 hr ago",
+          "amount": "-0.027244281",
+          "post_balance": "0.008563987",
+          "token_name": "SOL",
+          "token_address": "So11111111111111111111111111111111111111111"
+        }
+      ]
+    },
+    {
+      "signature": "2eEweUgf2PLZ7ULteZCHmxPegGCNVCL16CJixigshfT29L8FAKXWHyRRrMxkHRTw9F1exU1f9uuS2pbCoT8QHaCL",
+      "block": "343668770",
+      "time": "2 hrs ago",
+      "timestamp": "2025-05-31T11:04:22+00:00",
+      "instructions": [
+        "buy"
+      ],
+      "by": "6xspgTx3zS1iYvFy73fWhbRTVtLfCqbAVJHxUxhurHvC",
+      "value": "0.072244",
+      "fee": "0.000105",
+      "page": 1,
+      "balance_changes": [
+        {
+          "signature": "2eEweUgf2PLZ7ULteZCHmxPegGCNVCL16CJixigshfT29L8FAKXWHyRRrMxkHRTw9F1exU1f9uuS2pbCoT8QHaCL",
+          "block": "343668770",
+          "time": "2 hrs ago",
+          "amount": "+630,313.708040",
+          "post_balance": "630,313.708040",
+          "token_name": "Polekitty",
+          "token_address": "Bq7pSuNone1xGHXsDYcpe7XSfAcEJP8PgMRcMm7Kpump"
+        },
+        {
+          "signature": "2eEweUgf2PLZ7ULteZCHmxPegGCNVCL16CJixigshfT29L8FAKXWHyRRrMxkHRTw9F1exU1f9uuS2pbCoT8QHaCL",
+          "block": "343668770",
+          "time": "2 hrs ago",
+          "amount": "-0.072244280",
+          "post_balance": "0.011618393",
+          "token_name": "SOL",
+          "token_address": "So11111111111111111111111111111111111111111"
+        }
+      ]
+    },
+    {
+      "signature": "2HJ4R884kVKVv82FPzYaE41b4u5m5GWUop4H1iQyjqMWo3t7Tg5Rctry5nH5Wz1MZVjTaj28BukgQhkRBoFiR3rK",
+      "block": "343647990",
+      "time": "4 hrs ago",
+      "timestamp": "2025-05-31T08:48:07+00:00",
+      "instructions": [
+        "buy"
+      ],
+      "by": "6xspgTx3zS1iYvFy73fWhbRTVtLfCqbAVJHxUxhurHvC",
+      "value": "0.010244",
+      "fee": "0.000105",
+      "page": 1,
+      "balance_changes": [
+        {
+          "signature": "2HJ4R884kVKVv82FPzYaE41b4u5m5GWUop4H1iQyjqMWo3t7Tg5Rctry5nH5Wz1MZVjTaj28BukgQhkRBoFiR3rK",
+          "block": "343647990",
+          "time": "4 hrs ago",
+          "amount": "+69,369.796000",
+          "post_balance": "69,369.796000",
+          "token_name": "Gypsy",
+          "token_address": "8xqUD5nKHkYhFCPs6W5kbVP6h9FzL2BNYq6HYoD3pump"
+        },
+        {
+          "signature": "2HJ4R884kVKVv82FPzYaE41b4u5m5GWUop4H1iQyjqMWo3t7Tg5Rctry5nH5Wz1MZVjTaj28BukgQhkRBoFiR3rK",
+          "block": "343647990",
+          "time": "4 hrs ago",
+          "amount": "-0.010244281",
+          "post_balance": "0.004754757",
+          "token_name": "SOL",
+          "token_address": "So11111111111111111111111111111111111111111"
+        }
+      ]
+    },
+    {
+      "signature": "3fasRKjX21gBMDd4vUXQAJ1FumjciLdUUf452qGRo8KrsaiMk3xfyw3PnUd9HQWjtuB3UMH9GUeiijKDcW8Boeym",
+      "block": "343646414",
+      "time": "4 hrs ago",
+      "timestamp": "2025-05-31T08:37:52+00:00",
+      "instructions": [
+        "buy"
+      ],
+      "by": "6xspgTx3zS1iYvFy73fWhbRTVtLfCqbAVJHxUxhurHvC",
+      "value": "0.032244",
+      "fee": "0.000105",
+      "page": 1,
+      "balance_changes": [
+        {
+          "signature": "3fasRKjX21gBMDd4vUXQAJ1FumjciLdUUf452qGRo8KrsaiMk3xfyw3PnUd9HQWjtuB3UMH9GUeiijKDcW8Boeym",
+          "block": "343646414",
+          "time": "4 hrs ago",
+          "amount": "+310,860.318375",
+          "post_balance": "310,860.318375",
+          "token_name": "POTATO",
+          "token_address": "5x8CY94omosTF29G938GVqgV2UYH1qGjiN26JHpVpump"
+        },
+        {
+          "signature": "3fasRKjX21gBMDd4vUXQAJ1FumjciLdUUf452qGRo8KrsaiMk3xfyw3PnUd9HQWjtuB3UMH9GUeiijKDcW8Boeym",
+          "block": "343646414",
+          "time": "4 hrs ago",
+          "amount": "-0.032244280",
+          "post_balance": "0.005425907",
+          "token_name": "SOL",
+          "token_address": "So11111111111111111111111111111111111111111"
+        }
+      ]
+    },
+    {
+      "signature": "3x2VfMS4Q9pyLB6FnjSDYxaKQHg6NqHQYsd4jGLZznREQi8RDfNAxK9pqsaJoirWsKtfjkgoDWgsAx8rWguiWBHd",
+      "block": "343645559",
+      "time": "4 hrs ago",
+      "timestamp": "2025-05-31T08:32:14+00:00",
+      "instructions": [
+        "buy"
+      ],
+      "by": "6xspgTx3zS1iYvFy73fWhbRTVtLfCqbAVJHxUxhurHvC",
+      "value": "0.072244",
+      "fee": "0.000105",
+      "page": 1,
+      "balance_changes": [
+        {
+          "signature": "3x2VfMS4Q9pyLB6FnjSDYxaKQHg6NqHQYsd4jGLZznREQi8RDfNAxK9pqsaJoirWsKtfjkgoDWgsAx8rWguiWBHd",
+          "block": "343645559",
+          "time": "4 hrs ago",
+          "amount": "+727,391.595182",
+          "post_balance": "727,391.595182",
+          "token_name": "NUCLEARROT",
+          "token_address": "nyu2tFxZZBE7iCqqUnJGocKEqjNy28vyaQgsxofpump"
+        },
+        {
+          "signature": "3x2VfMS4Q9pyLB6FnjSDYxaKQHg6NqHQYsd4jGLZznREQi8RDfNAxK9pqsaJoirWsKtfjkgoDWgsAx8rWguiWBHd",
+          "block": "343645559",
+          "time": "4 hrs ago",
+          "amount": "-0.072244280",
+          "post_balance": "0.016642105",
+          "token_name": "SOL",
+          "token_address": "So11111111111111111111111111111111111111111"
+        }
+      ]
+    },
+    {
+      "signature": "352rQ85kPYkgPGZmpGv74eFXFEpfDKbbvMnSqz8dtnzJTwarSXV611kvQ8h2VibDvqDWr1TsM9hdvjbpj92g6fpj",
+      "block": "343644502",
+      "time": "4 hrs ago",
+      "timestamp": "2025-05-31T08:25:18+00:00",
+      "instructions": [
+        "buy"
+      ],
+      "by": "6xspgTx3zS1iYvFy73fWhbRTVtLfCqbAVJHxUxhurHvC",
+      "value": "0.010205",
+      "fee": "0.000105",
+      "page": 1,
+      "balance_changes": [
+        {
+          "signature": "352rQ85kPYkgPGZmpGv74eFXFEpfDKbbvMnSqz8dtnzJTwarSXV611kvQ8h2VibDvqDWr1TsM9hdvjbpj92g6fpj",
+          "block": "343644502",
+          "time": "4 hrs ago",
+          "amount": "+196,821.245554",
+          "post_balance": "765,978.490806",
+          "token_name": "SQUISH",
+          "token_address": "6kYcjBCzhQ9fbSuLPcXq1o1XBerKX8aqMgR7FqG8pump"
+        },
+        {
+          "signature": "352rQ85kPYkgPGZmpGv74eFXFEpfDKbbvMnSqz8dtnzJTwarSXV611kvQ8h2VibDvqDWr1TsM9hdvjbpj92g6fpj",
+          "block": "343644502",
+          "time": "4 hrs ago",
+          "amount": "-0.010205000",
+          "post_balance": "0.017574096",
+          "token_name": "SOL",
+          "token_address": "So11111111111111111111111111111111111111111"
+        }
+      ]
+    },
+    {
+      "signature": "wwsABuZzZzevy149ZZKqiibFJhftqHzD1zjVUYVKyVyW6CvhMpp4sJNzCFzfTqAKYU2GHjwf18772MEtbZy1USG",
+      "block": "343643465",
+      "time": "4 hrs ago",
+      "timestamp": "2025-05-31T08:18:31+00:00",
+      "instructions": [
+        "buy"
+      ],
+      "by": "6xspgTx3zS1iYvFy73fWhbRTVtLfCqbAVJHxUxhurHvC",
+      "value": "0.072244",
+      "fee": "0.000105",
+      "page": 1,
+      "balance_changes": [
+        {
+          "signature": "wwsABuZzZzevy149ZZKqiibFJhftqHzD1zjVUYVKyVyW6CvhMpp4sJNzCFzfTqAKYU2GHjwf18772MEtbZy1USG",
+          "block": "343643465",
+          "time": "4 hrs ago",
+          "amount": "+669,596.759119",
+          "post_balance": "669,596.759119",
+          "token_name": "SQUISH",
+          "token_address": "6kYcjBCzhQ9fbSuLPcXq1o1XBerKX8aqMgR7FqG8pump"
+        },
+        {
+          "signature": "wwsABuZzZzevy149ZZKqiibFJhftqHzD1zjVUYVKyVyW6CvhMpp4sJNzCFzfTqAKYU2GHjwf18772MEtbZy1USG",
+          "block": "343643465",
+          "time": "4 hrs ago",
+          "amount": "-0.072244280",
+          "post_balance": "0.006249730",
+          "token_name": "SOL",
+          "token_address": "So11111111111111111111111111111111111111111"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "total_transactions": 13,
+    "balance_changes_found": 26
+  },
+  "timestamp": "2025-05-31 20:14:02"
+}
